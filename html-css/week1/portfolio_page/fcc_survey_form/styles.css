@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-image: linear-gradient(190deg, rgba(58, 58, 58, 0.8), rgba(100, 120, 170, 0.7)),
+    url(survey-form-background.webp);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  display: block;
+}
+
+#page-wrapper {
+  max-width: 800px;
+  min-width: 360px;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+
+header {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#title {
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 2px #000;
+}
+
+#description {
+  font-style: italic;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 2px #000;
+}
+
+#survey-form {
+  background: rgba(20, 20, 20, 0.75);
+  padding: 2.5rem;
+  border-radius: 8px;
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 2rem;
+}
+
+label {
+  display: block;
+  font-size: 1.5rem;
+}
+
+input,
+select,
+textarea {
+  margin: 0.5rem 0 1.5rem 0;
+  width: 100%;
+  min-height: 2em;
+  border-radius: 5px;
+}
+
+input {
+  padding: 0.5rem 0.5rem;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+#dropdown {
+  padding: 0.5rem 0.5rem;
+  font-size: 1rem;
+}
+
+#referral,
+#description-imp,
+#description-sug {
+  font-size: 1.5rem;
+}
+
+#recommendation-label,
+#improvement-label {
+  display: block;
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: unset;
+  vertical-align: middle;
+  width: 1rem;
+  height: 1rem;
+  margin: 0 5px 3px 0;
+}
+
+button {
+  width: 100%;
+  font-size: 1.5rem;
+  background-color: aquamarine;
+  padding: 0.5rem 0;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+
+button:hover {
+  background-color: gray;
+}
+
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
