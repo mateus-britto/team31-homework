@@ -21,11 +21,11 @@
         </ul>
     </nav>
 
-    <div class="container">
-        <section id="about">
+    <main class="container">
+        <section id="about" class="about-section">
 
             <div class="intro">
-                <h2 class="call-to-action">Welcome to my portfolio page!<br><br> Here, I showcase my journey and progress toward becoming a full-stack web developer. <br><br> Grab a cup of coffee and enjoy exploring!</h2>
+                <h1 class="call-to-action">Welcome to my portfolio page!<br><br> Here, I showcase my journey and progress toward becoming a full-stack web developer. <br><br> Grab a cup of coffee and enjoy exploring!</h1>
             </div>
             <div class="profile-container">
                 <img class="profile" src="profile.webp" width="480" height="480" alt="profile">
@@ -37,23 +37,23 @@
 
         </section>
 
-        <section id="work">
+        <section id="work" class="work-section">
             <div class="work-wrapper">
-                <div class="title-wrapper-html">
-                    <h1 class="main-content-html-title">Here are some of my projects</h1>
+                <h1 class="main-content-html-title">Here are some of my projects</h1>
+                <div class="projects-container">
+                    <figure class="form img-container">
+                        <a href="./fcc_survey_form/index.html" target="_blank">
+                            <img class="project-img" src="form-img.webp" width="350" height="196" alt="form">
+                            <figcaption class="img-caption">
+                                FCC Survey Form
+                        </a>
+                        </figcaption>
+                    </figure>
                 </div>
-                <figure class="form img-container">
-                    <a href="./fcc_survey_form/index.html" target="_blank">
-                        <img class="project-img" src="form-img.webp" width="350" height="196" alt="form">
-                        <figcaption class="img-caption">
-                            FCC Survey Form
-                    </a>
-                    </figcaption>
-                </figure>
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="contact-section">
             <div class="quote-div">
                 <figure class="tolkien">
                     <blockquote>
@@ -66,19 +66,19 @@
             </div>
             <div class="contact-info">
                 <ul class="contacts-list">
-                    <li><a href="https://www.facebook.com/mateus.britto.758" target="_blank" rel="noopener noreferrer"
+                    <li class=".contacts-list__item"><a class="contact-info__link" href="https://www.facebook.com/mateus.britto.758" target="_blank" rel="noopener noreferrer"
                             aria-label="Visit my Facebook profile">
                             <i class="fa-brands fa-facebook"></i>
                             Facebook</a></li>
-                    <li><a href="https://www.linkedin.com/in/mateus-britto-03846bb5/" target="_blank"
+                    <li class=".contacts-list__item"><a class="contact-info__link" href="https://www.linkedin.com/in/mateus-britto-03846bb5/" target="_blank"
                             rel="noopener noreferrer" aria-label="Visit my LinkedIn profile">
                             <i class="fa-brands fa-linkedin"></i>
                             LinkedIn</a></li>
-                    <li><a href="https://github.com/mateus-britto" target="_blank" rel="noopener noreferrer"
+                    <li class=".contacts-list__item"><a class="contact-info__link" href="https://github.com/mateus-britto" target="_blank" rel="noopener noreferrer"
                             aria-label="Visit my GitHub profile">
                             <i class="fa-brands fa-github"></i>
                             GitHub</a></li>
-                    <li><a href="https://www.instagram.com/mateus.britto/" target="_blank" rel="noopener noreferrer"
+                    <li class=".contacts-list__item"><a class="contact-info__link" href="https://www.instagram.com/mateus.britto/" target="_blank" rel="noopener noreferrer"
                             aria-label="Visit my Instagram profile">
                             <i class="fa-brands fa-square-instagram"></i>
                             Instagram</a></li>
@@ -86,7 +86,7 @@
             </div>
         </section>
 
-    </div>
+    </main>
     <script defer src="https://kit.fontawesome.com/b4f03823c8.js" crossorigin="anonymous"></script>
 </body>
 
