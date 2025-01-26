@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Order Desktop</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header-title">Thank you for choosing our store!</h1>
+      <p class="header-subtitle">Please fill out the fields below to complete your purchase.</p>
+    </header>
+
+    <div class="sections-wrapper">
+      <section class="order-summary">
+        <h2 class="order-summary-title">Order Summary</h2>
+        <div class="total-top total-container">
+          <p>Total</p>
+          <p class="order-summary-total">$333 / month</p>
+        </div>
+        <div class="total-bottom total-container">
+          <p>Total</p>
+          <p class="order-summary-total">$100</p>
+        </div>
+      </section>
+
+      <section class="payment-method">
+        <h2 class="payment-method-title">Payment Method</h2>
+        <div class="buttons-div">
+          <button class="payment-method-button">
+            <img class="credit-cards-img" src="credit-cards-img.png" alt="credit cards image" />
+            <p>Credit / Debit</p>
+          </button>
+          <button class="payment-method-button">
+            <img class="paypal-img" src="paypal-img.png" alt="paypal image" />
+            <p>Paypal</p>
+          </button>
+        </div>
+      </section>
+
+      <section class="card-info">
+        <form class="payment-form">
+          <div class="card-section-grid">
+            <h2 class="card-info-title">Card Info</h2>
+
+            <div class="card-number">
+              <label for="card-number">Card Number</label>
+              <input
+                type="text"
+                id="card-number"
+                name="card-number"
+                placeholder="1234 1234 1234 1234"
+                maxlength="19"
+                autocomplete="cc-number"
+                required
+              /><i class="fa-solid fa-circle-question" title="16 digit number on your card"></i>
+            </div>
+
+            <div class="expiry-date">
+              <label for="expiry-date">Expiry Date</label>
+              <input
+                type="text"
+                id="expiry-date"
+                name="expiry-date"
+                placeholder="MM / YY"
+                maxlength="5"
+                autocomplete="cc-exp"
+                required
+              />
+            </div>
+
+            <div class="security-code">
+              <label for="cvv">Security Code</label>
+              <input
+                type="text"
+                id="cvv"
+                name="cvv"
+                placeholder="CVV"
+                maxlength="3"
+                autocomplete="cc-csc"
+                required
+              /><i class="fa-solid fa-circle-question" title="3 digit security code"></i>
+            </div>
+
+            <div class="button-container">
+              <button type="submit" class="card-info-button">Buy now</button>
+              <a class="help" href="#">Need Help?</a>
+            </div>
+          </div>
+        </form>
+      </section>
+    </div>
+  </body>
+  <script src="https://kit.fontawesome.com/b4f03823c8.js" crossorigin="anonymous"></script>
+</html>

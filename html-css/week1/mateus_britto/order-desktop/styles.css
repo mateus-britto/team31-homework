@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif, sans-serif;
+  background-color: #808080;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #ffffff;
+  margin: 30px;
+  font-family: "Montserrat", serif;
+  padding: 20px;
+}
+
+.header-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.header-subtitle {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.sections-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  background-color: #ffffff;
+}
+
+.order-summary {
+  background: linear-gradient(90deg, #fd7b46, #fe4e9b);
+  color: #ffffff;
+  width: 100%;
+  height: auto;
+  padding: 40px 20px 20px 20px;
+}
+
+.total-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-summary-title {
+  margin-bottom: 10px;
+}
+
+.total-top {
+  border-bottom: solid 1px #ffffff;
+}
+
+.total-top > p {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.total-bottom > p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.payment-method {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 171px;
+  margin-top: 30px;
+}
+
+.payment-method-title {
+  font-size: 24px;
+}
+
+.buttons-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+}
+
+.payment-method-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  width: 100%;
+  max-height: 110px;
+  background-color: #ffffff;
+  font-size: 1.125rem;
+  font-family: "Montserrat", serif;
+  font-weight: bold;
+  font-style: italic;
+  color: #939393;
+  border-radius: 10px;
+  border: solid 4px transparent;
+  box-shadow: 8px 8px 20px #0000003d;
+  padding: 20px 0;
+  transition: border ease-in 0.2s;
+}
+
+.payment-method-button:hover {
+  border: solid 4px #fe4e9b;
+}
+
+.credit-cards-img {
+  width: 138.5px;
+  height: auto;
+}
+
+.paypal-img {
+  width: 40px;
+  height: auto;
+}
+.card-info {
+  width: 100%;
+  height: 100%;
+  margin-top: 30px;
+}
+
+.card-section-grid {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  grid-template-areas:
+    "title title title"
+    "card-number expiry-date security-code"
+    "button-container button-container button-container";
+  column-gap: 20px;
+  padding: 20px;
+}
+
+.card-info-title {
+  grid-area: title;
+  font-size: 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.card-number {
+  height: 91px;
+  position: relative;
+}
+
+.card-number > i {
+  bottom: 14px;
+  right: 10px;
+  position: absolute;
+  font-size: 2rem;
+  color: #939393;
+}
+
+.expiry-date {
+  height: 91px;
+}
+
+.security-code {
+  height: 91px;
+  position: relative;
+}
+
+.security-code > i {
+  bottom: 14px;
+  right: 10px;
+  position: absolute;
+  font-size: 2rem;
+  color: #939393;
+}
+
+.fa-circle-question {
+  cursor: pointer;
+}
+
+.card-number > input,
+.expiry-date > input,
+.security-code > input {
+  width: 100%;
+  max-width: 350px;
+  min-width: 0;
+  height: 44px;
+}
+
+label {
+  font-family: "Montserrat", serif;
+  font-size: 1.125;
+  font-weight: 600;
+  color: #939393;
+  padding-bottom: 10px;
+}
+
+input {
+  border: solid 1px #939393;
+  border-radius: 4px;
+  font-size: 18px;
+  padding: 0 10px;
+  background-color: #f3f1f2;
+}
+
+input::placeholder {
+  font-size: 18px;
+  color: #939393;
+}
+
+.card-number {
+  grid-area: card-number;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.expiry-date {
+  grid-area: expiry-date;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.security-code {
+  grid-area: security-code;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-container {
+  grid-area: button-container;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.card-info-button {
+  cursor: pointer;
+  min-height: 68px;
+  background: linear-gradient(90deg, #fd7b46, #fe4e9b);
+  font-size: 24px;
+  font-family: "Montserrat", serif;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 68px;
+  border: none;
+  margin-bottom: 30px;
+  padding: 0 40px;
+  transition: border 0.1s ease-in;
+}
+
+.card-info-button:hover {
+  border: solid 4px #fe4e9b;
+  background-color: #ffffff;
+  background: linear-gradient(90deg, #fe4e9b, #fd7b46);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.help {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #fe4e9b, #fd7b46);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+  transition: transform ease-in 0.1s;
+}
+
+.help:hover {
+  background: linear-gradient(90deg, #fd7b46, #fe4e9b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.1);
+}
+
+/* Media Queries */
+
+@media (max-width: 780px) {
+  html {
+    font-size: 80%;
+  }
+
+  .payment-form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-section-grid {
+    max-width: 380px;
+    grid-template-areas:
+      "title title"
+      "card-number card-number"
+      "expiry-date security-code"
+      "button-container button-container";
+  }
+
+  .card-number > i {
+    bottom: 18px;
+    right: 10px;
+  }
+
+  .security-code > i {
+    bottom: 18px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 70%;
+  }
+
+  .credit-cards-img {
+    width: 100px;
+  }
+
+  .card-number > i {
+    bottom: 21px;
+    right: 10px;
+  }
+
+  .security-code > i {
+    bottom: 21px;
+    right: 10px;
+  }
+}
