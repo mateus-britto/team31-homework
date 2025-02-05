@@ -9,17 +9,17 @@ let gardenSizeInM2;
 let housePrice = volumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300;
 
 // Pedro's house
-console.log("Pedro's House");
+console.log("Peter's House");
 volumeInMeters = 8 * 10 * 10;
 gardenSizeInM2 = 100;
 housePrice = volumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300;
-pedrosHousePrice = 2500000;
+petersHousePrice = 2500000;
 
-if (pedrosHousePrice > housePrice) {
+if (petersHousePrice > housePrice) {
   console.log(
     "The average price for a house of this size is " + housePrice + ". You are being overcharged."
   );
-} else if (pedrosHousePrice === housePrice) {
+} else if (petersHousePrice === housePrice) {
   console.log("The house is fair priced.");
 } else {
   console.log(
