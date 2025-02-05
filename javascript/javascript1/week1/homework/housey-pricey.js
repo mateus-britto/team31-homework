@@ -8,7 +8,7 @@ let gardenSizeInM2;
 
 let housePrice = volumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300;
 
-// Pedro's house
+// Peter's house
 console.log("Peter's House");
 volumeInMeters = 8 * 10 * 10;
 gardenSizeInM2 = 100;
