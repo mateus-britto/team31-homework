@@ -1,13 +1,13 @@
 // Goodboy-Oldboy (A dog age calculator)
 
-let dogYearOfBirth = 2020;
-let dogYearFuture = 2030;
+const dogYearOfBirth = 2020;
+const dogYearFuture = 2030;
 let dogYear = dogYearFuture - dogYearOfBirth;
 
-let shouldShowResultInDogYears = true;
+const shouldShowResultInDogYears = true;
 
 if (shouldShowResultInDogYears) {
-  dogYear *= 9;
+  dogYear *= 7;
   console.log("Your dog will be " + dogYear + " dog years old in " + dogYearOfBirth + ".");
 } else {
   console.log("Your dog will be " + dogYear + " human years in " + dogYearOfBirth + ".");

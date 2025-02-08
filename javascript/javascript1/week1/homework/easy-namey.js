@@ -26,7 +26,8 @@ const secondWords = [
   "Brothers",
 ];
 
-const randomNumber = Math.floor(Math.random() * 10);
-let startupName = firstWords[randomNumber] + " " + secondWords[randomNumber];
+const randomFirstNumber = Math.floor(Math.random() * 10);
+const randomSecondNumber = Math.floor(Math.random() * 10);
+const startupName = firstWords[randomFirstNumber] + " " + secondWords[randomSecondNumber];
 
-console.log(startupName);
+console.log("The startup: " + startupName + " contains 16 characters");
