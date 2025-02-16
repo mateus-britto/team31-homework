@@ -25,8 +25,9 @@ function addCandy(candyType, weight) {
 function canBuyMoreCandy() {
   let totalSpent = 0;
   let i = 0;
-  
-  while (i < boughtCandyPrices.length) {
+  const candyCount = boughtCandyPrices.length; // Store the length in a variable
+
+  while (i < candyCount) {
     totalSpent += boughtCandyPrices[i];
     i++;
   }
@@ -36,10 +37,8 @@ function canBuyMoreCandy() {
 
   if (totalSpent < amountToSpend) {
     console.log("You can buy more, so please do!");
-    return true;
   } else {
     console.log("Enough candy for you!");
-    return false;
   }
 }
 

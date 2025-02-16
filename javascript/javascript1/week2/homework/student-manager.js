@@ -4,15 +4,12 @@ const class07Students = [];
 
 // Function to add students to the class.
 function addStudentToClass(studentName) {
-  if (studentName === "") {
+  if (!studentName) {
     return "Student name cannot be empty.";
   }
 
-  for (let i = 0; i < class07Students.length; i++) {
-    if (class07Students[i] === studentName) {
-      // Iterate through the array to find students with the same name.
-      return "Student " + studentName + " is already in the class.";
-    }
+  if (class07Students.includes(studentName)) { // Change the condition to use the includes method.
+    return "Student " + studentName + " is already in the class.";
   }
 
   if (class07Students.length < 6 || studentName === "Queen of Denmark") {
