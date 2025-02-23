@@ -6,7 +6,7 @@ const travelInformation = {
 };
 
 const travelTime = function (travelInformation) {
-  let travelSpeed = travelInformation.speed; // Speed in km/h.
+  const travelSpeed = travelInformation.speed; // Speed in km/h.
   let distance = travelInformation.destinationDistance; // Distance in km.
 
   // Calculate travel time in hours

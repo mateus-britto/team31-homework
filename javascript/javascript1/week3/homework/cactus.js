@@ -1,7 +1,7 @@
 // Exercise 4: CactusIO-interactive (Smart phone usage app)
 
 const activities = []; // Activities array.
-let usageLimit = 0; // Global variable to store the usage limit.
+let usageLimit = 180; // Global variable to store the usage limit.
 
 // Getting the current date
 const currentDate = new Date();
@@ -10,19 +10,12 @@ const month = currentDate.getMonth() + 1; // Months are zero-based, so add 1.
 const year = currentDate.getFullYear();
 const formattedDate = `${day}/${month}-${year.toString().slice(-2)}`;
 
-// Function to set the time limit.
-function setUsageLimit(timeLimit) {
-  usageLimit = timeLimit;
-}
-
-// Set the usage limit.
-setUsageLimit(180);
-
 // Function to add activity.
 function addActivity(activity, duration) {
-  let date = formattedDate;
+  const date = formattedDate;
 
-  activities.push({ date: date, activity: activity, duration: duration });
+  // When key and property have the same name, you can shorten the code like this:
+  activities.push({ date, activity, duration });
 }
 
 // Tests

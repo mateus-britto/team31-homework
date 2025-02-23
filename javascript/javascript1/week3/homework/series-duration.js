@@ -27,7 +27,7 @@ function logOutSeriesText(years) {
   let totalPercentage = 0;
   for (let i = 0; i < seriesDurations.length; i++) {
     // Calculate the total time spent on each series in hours.
-    let totalTime =
+    const totalTime =
       seriesDurations[i].days * 24 + seriesDurations[i].hours + seriesDurations[i].minutes / 60;
     // Calculate the percentage of the lifespan spent on each series.
     let percentageSpent = (totalTime / lifespan) * 100;
