@@ -140,9 +140,9 @@ for (let food of favoriteFoods) {
 }
 
 // 2. Write a function that takes an array of numbers and returns the sum of all elements. What is the sum of [5, 10, -98, 17.5, 365, -2.5]?
-//const array = [5, 10, -98, 17.5, 365, -2.5];
+const arr = [5, 10, -98, 17.5, 365, -2.5];
 
-function sumOfElements(arr) {
+function sumOfElements(array) {
   let sum = 0;
 
   for (element of array) {
@@ -150,7 +150,7 @@ function sumOfElements(arr) {
   }
   console.log(sum);
 }
-//sumOfElements(array)
+//sumOfElements(arr)
 
 // 3. Given an array [10, 20, 30, 40, 50], write code to remove the last element and add 60 at the end.
 const array = [10, 20, 30, 40, 50];
