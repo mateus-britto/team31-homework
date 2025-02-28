@@ -12,6 +12,7 @@ function vowelCounter(string) {
   // Method 2 - for loops
   const vowelsArray = [];
   // Simple for loop
+  /* 
   for (let i = 0; i < string.length; i++) {
     if (string[i] === "a") {
       vowelsArray.push(string[i]);
@@ -24,11 +25,25 @@ function vowelCounter(string) {
     } else if (string[i] === "u") {
       vowelsArray.push(string[i]);
     }
+  } 
+  */
+
+  // Switch statement
+  for (let i = 0; i < string.length; i++) {
+    switch (string[i].toLowerCase()) {
+      case "a":
+      case "e":
+      case "i":
+      case "o":
+      case "u":
+        vowelsArray.push(string[i]);
+        break;
+    }
   }
-  // return `The string contains ${vowelsArray.length} vowels.`; // Uncomment to test.
+  //  return `The string contains ${vowelsArray.length} vowels.`; // Uncomment to test.
 }
 
-//console.log(vowelCounter(testStr));
+// console.log(vowelCounter(testStr)); // Uncomment to test.
 
 // Exercise 2 - Square Every Digit
 
@@ -54,8 +69,9 @@ function highAndLow(number) {
   let highest = 0;
   let lowest = 9999999;
 
-   for (let i = 0; i < number.length; i++) {
-    if (parseInt(number[i]) > highest) { // Convert the strings to numbers before comparing them.
+  for (let i = 0; i < number.length; i++) {
+    if (parseInt(number[i]) > highest) {
+      // Convert the strings to numbers before comparing them.
       highest = number[i];
     }
   }

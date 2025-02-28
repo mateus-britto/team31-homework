@@ -71,7 +71,7 @@ function getReply(command) {
     // Executes a command after the specified interval has passed.
     setTimeout(() => {
       console.log("Timer done");
-    }, 3000); // This parameter is the time interval in milliseconds (set to 3000 to make it easier to test).
+    }, 240000); // Change to 4 minutes.
   }
 }
 
