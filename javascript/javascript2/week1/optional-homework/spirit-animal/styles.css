@@ -2,15 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
 }
 
 body {
   background-color: rgb(78, 77, 77);
+}
+
+.main-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .animal-input {

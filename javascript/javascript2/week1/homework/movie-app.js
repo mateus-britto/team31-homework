@@ -73,39 +73,39 @@ const movies = [
 
 // Variables
 const body = document.body;
-const main = document.querySelector("#main");
-const clearCommentsButton = document.querySelector("#clear-comments-button");
+const main = document.getElementById("main-content");
+const clearCommentsButton = document.getElementById("clear-comments-button");
 
 // Function to create the card component
 function cardCreator() {
   movies.forEach((item) => {
     const card = document.createElement("div");
-    card.setAttribute("id", "card__component");
-    card.setAttribute("class", "card__component");
+    card.setAttribute("id", "card-component");
+    card.setAttribute("class", "card-component");
 
     const moviePoster = document.createElement("img");
-    moviePoster.setAttribute("id", "card__component___poster");
-    moviePoster.setAttribute("class", "card__component___poster");
+    moviePoster.setAttribute("id", "card-component-poster");
+    moviePoster.setAttribute("class", "card-component-poster");
     moviePoster.setAttribute("src", item.poster_url);
 
     // This div will wrap the text components
     const movieWrapper = document.createElement("div");
-    movieWrapper.setAttribute("id", "card__component__movie__wrapper");
-    movieWrapper.setAttribute("class", "card__component__movie__wrapper");
+    movieWrapper.setAttribute("id", "card-component-movie-wrapper");
+    movieWrapper.setAttribute("class", "card-component-movie-wrapper");
 
     const movieTitle = document.createElement("h2");
-    movieTitle.setAttribute("id", "card__component__movie__title");
-    movieTitle.setAttribute("class", "card__component__movie__title");
+    movieTitle.setAttribute("id", "card-component-movie-title");
+    movieTitle.setAttribute("class", "card-component-movie-title");
     movieTitle.innerText = item.title;
 
     const movieSummary = document.createElement("p");
-    movieSummary.setAttribute("id", "card__component__movie__summary");
-    movieSummary.setAttribute("class", "card__component__movie__summary");
+    movieSummary.setAttribute("id", "card-component-movie-summary");
+    movieSummary.setAttribute("class", "card-component-movie-summary");
     movieSummary.innerText = "Summary";
 
     const movieDescription = document.createElement("p");
-    movieDescription.setAttribute("id", "card__component__movie__description");
-    movieDescription.setAttribute("class", "card__component__movie__description");
+    movieDescription.setAttribute("id", "card-component-movie-description");
+    movieDescription.setAttribute("class", "card-component-movie-description");
     movieDescription.innerText = item.description;
 
     // Limiting the number of actors shown
@@ -114,16 +114,16 @@ function cardCreator() {
     const hiddenActors = item.actors.slice(maxVisible).join(", ");
 
     const movieCast = document.createElement("p");
-    movieCast.setAttribute("id", "card__component__movie__cast");
-    movieCast.setAttribute("class", "card__component__movie__cast");
+    movieCast.setAttribute("id", "card-component-movie-cast");
+    movieCast.setAttribute("class", "card-component-movie-cast");
     movieCast.innerHTML = `
   <strong>Cast:</strong> ${visibleActors}
   <span class="hidden-actors">, ${hiddenActors}</span> <span class="see-more-actors">see more...</span> 
 `;
 
     const movieRating = document.createElement("p");
-    movieRating.setAttribute("id", "card__component__movie__star");
-    movieRating.setAttribute("class", "card__component__movie__star");
+    movieRating.setAttribute("id", "card-component-movie-star");
+    movieRating.setAttribute("class", "card-component-movie-star");
     movieRating.innerText = "Click here to rate this movie";
     movieRating.addEventListener("click", () => {
       movieRater(movieRating);
@@ -131,15 +131,15 @@ function cardCreator() {
 
     // Comment input field
     const movieComment = document.createElement("input");
-    movieComment.setAttribute("id", `card__component__movie__comment_${item.id}`);
-    movieComment.setAttribute("class", "card__component__movie__comment");
+    movieComment.setAttribute("id", `card-component-movie-comment_${item.id}`);
+    movieComment.setAttribute("class", "card-component-movie-comment");
     movieComment.setAttribute("type", "text");
     movieComment.placeholder = "Say something about this movie";
 
     // Comment wrapper
     const commentWrapper = document.createElement("div");
-    commentWrapper.setAttribute("id", "comment__wrapper");
-    commentWrapper.setAttribute("class", "comment__wrapper");
+    commentWrapper.setAttribute("id", "comment-wrapper");
+    commentWrapper.setAttribute("class", "comment-wrapper");
 
     // Event listener to add comments
     movieComment.addEventListener("keydown", function (event) {
@@ -148,19 +148,23 @@ function cardCreator() {
         const inputValue = this.value;
         if (inputValue.trim()) {
           const comment = document.createElement("p");
+          comment.setAttribute("class", "comment-text")
           comment.innerHTML = `<strong>User review (${item.title})</strong>: <br> ${inputValue}`;
           commentWrapper.style.display = "block"; // Displays the hidden div with the comment
           commentWrapper.append(comment);
           body.append(commentWrapper);
           this.value = ""; // Clear input field after submitting
           clearCommentsButton.style.display = "block"; // Displays the button if there are messages
+        } else {
+          // Handle the case where the input is empty or whitespace
+          alert("Please enter a valid comment.");
         }
       }
     });
 
     // Event listener to clear the comments button
     clearCommentsButton.addEventListener("click", () => {
-      document.querySelectorAll(".comment__wrapper").forEach((element) => element.remove());
+      document.querySelectorAll(".comment-wrapper").forEach((element) => element.remove());
       commentWrapper.innerHTML = ""; // Clear the previous comments
       clearCommentsButton.style.display = "none"; // Hides the button if there are no comments
     });

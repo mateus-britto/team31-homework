@@ -1,5 +1,6 @@
 //Variables
 const body = document.body;
+const mainContent = document.getElementById("main-content");
 
 // User name input
 const nameInput = document.createElement("input");
@@ -64,7 +65,7 @@ displayHoverToggle.setAttribute("class", "toggle display-hover-toggle");
 displayHoverLabel.append(displayHoverToggle);
 
 // Appending all items
-body.append(
+mainContent.append(
   nameInput,
   displayClickLabel,
   displayHoverLabel,
@@ -108,7 +109,7 @@ function checkSelection() {
 function handleClick() {
   const inputText = nameInput.value;
 
-  if (inputText === "") {
+  if (!inputText) {
     userName.innerText = "Please type your name";
     nameDisplayContainer.append(userName);
   } else {

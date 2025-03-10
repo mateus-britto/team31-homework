@@ -2,12 +2,8 @@
 const testString = "this is a test string";
 
 function removeFirstAndLastCharacter(string) {
-  const newString = string.split("");
-
-  newString.splice(0, 1);
-  newString.splice(newString.length - 1, 1);
-
-  console.log(newString.join(""));
+  const newString = string.slice(1, -1);
+  console.log(newString);
 }
 
 // removeFirstAndLastCharacter(testString); // Uncomment to test
@@ -41,21 +37,9 @@ const sheepArray = [
 ];
 
 function countingSheep(array) {
-  let count = 0;
-
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] === null || array[i] === undefined) {
-      continue;
-    } else if (array[i] === true) {
-      count += 1;
-    } else {
-      continue;
-    }
-  }
-  console.log(count);
+  return array.filter((item) => item === true).length;
 }
-
-// countingSheep(sheepArray); // Uncomment to test
+// console.log(countingSheep(sheepArray)); // Uncomment to test
 
 // String ends with?
 function stringEndsWith(str1, str2) {
@@ -67,11 +51,12 @@ function stringEndsWith(str1, str2) {
 
 // Odd or Even?
 function oddOrEven(numbers) {
-  let sum = 0;
+  if (numbers.length === 0) {
+    return "even";
+  }
 
-  numbers.forEach((number) => {
-    sum += number;
-  });
+  // Use reduce to calculate the sum of the numbers
+  const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 
   if (sum % 2 === 0) {
     console.log("even");
@@ -79,7 +64,8 @@ function oddOrEven(numbers) {
     console.log("odd");
   }
 }
-
-// oddOrEven([0]); // Uncomment to test
-// oddOrEven([0, 1, 4]); // Uncomment to test
-// oddOrEven([0, -1, -5]); // Uncomment to test
+/* 
+oddOrEven([0]); // Uncomment to test
+oddOrEven([0, 1, 4]); // Uncomment to test
+oddOrEven([0, -1, -5]); // Uncomment to test
+ */
