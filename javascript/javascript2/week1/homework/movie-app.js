@@ -69,19 +69,183 @@ const movies = [
       "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
     price: "150.00",
   },
+  {
+    id: 4,
+    title: "The Matrix",
+    description:
+      "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+    movie_year: 1999,
+    director: "Lana Wachowski, Lilly Wachowski",
+    actors: [
+      "Keanu Reeves",
+      "Laurence Fishburne",
+      "Carrie-Anne Moss",
+      "Hugo Weaving",
+      "Joe Pantoliano",
+    ],
+    poster_url:
+      "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg",
+    price: "90.00",
+  },
+  {
+    id: 5,
+    title: "The Shawshank Redemption",
+    description:
+      "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+    movie_year: 1994,
+    director: "Frank Darabont",
+    actors: ["Tim Robbins", "Morgan Freeman", "Bob Gunton", "William Sadler", "Clancy Brown"],
+    poster_url:
+      "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
+    price: "80.00",
+  },
+  {
+    id: 6,
+    title: "Pulp Fiction",
+    description:
+      "The lives of two mob hitmen, a boxer, a gangster's wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+    movie_year: 1994,
+    director: "Quentin Tarantino",
+    actors: ["John Travolta", "Uma Thurman", "Samuel L. Jackson", "Bruce Willis", "Ving Rhames"],
+    poster_url: "https://image.tmdb.org/t/p/original/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg",
+    price: "110.00",
+  },
+  {
+    id: 7,
+    title: "Fight Club",
+    description:
+      "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.",
+    movie_year: 1999,
+    director: "David Fincher",
+    actors: ["Brad Pitt", "Edward Norton", "Meat Loaf", "Jared Leto", "Helena Bonham Carter"],
+    poster_url: "https://image.tmdb.org/t/p/original/bptfVGEQuv6vDTIMVCHjJ9Dz8PX.jpg",
+    price: "95.00",
+  },
+  {
+    id: 8,
+    title: "Forrest Gump",
+    description:
+      "The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate, and other historical events unfold from the perspective of an Alabama man with an IQ of 75.",
+    movie_year: 1994,
+    director: "Robert Zemeckis",
+    actors: ["Tom Hanks", "Robin Wright", "Gary Sinise", "Sally Field", "Mykelti Williamson"],
+    poster_url: "https://image.tmdb.org/t/p/original/saHP97rTPS5eLmrLQEcANmKrsFl.jpg",
+    price: "85.00",
+  },
+  {
+    id: 9,
+    title: "The Godfather",
+    description:
+      "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+    movie_year: 1972,
+    director: "Francis Ford Coppola",
+    actors: ["Marlon Brando", "Al Pacino", "James Caan", "Richard S. Castellano", "Robert Duvall"],
+    poster_url: "https://image.tmdb.org/t/p/original/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+    price: "130.00",
+  },
+  {
+    id: 10,
+    title: "The Lord of the Rings: The Fellowship of the Ring",
+    description:
+      "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
+    movie_year: 2001,
+    director: "Peter Jackson",
+    actors: [
+      "Elijah Wood",
+      "Ian McKellen",
+      "Orlando Bloom",
+      "Sean Bean",
+      "Sean Astin",
+      "Viggo Mortensen",
+      "Liv Tyler",
+      "Cate Blanchett",
+      "John Rhys-Davies",
+      "Billy Boyd",
+    ],
+    poster_url: "https://image.tmdb.org/t/p/original/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg",
+    price: "140.00",
+  },
+  {
+    id: 11,
+    title: "The Lion King",
+    description:
+      "Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.",
+    movie_year: 1994,
+    director: "Roger Allers, Rob Minkoff",
+    actors: [
+      "Matthew Broderick",
+      "Jeremy Irons",
+      "James Earl Jones",
+      "Whoopi Goldberg",
+      "Rowan Atkinson",
+    ],
+    poster_url: "https://image.tmdb.org/t/p/original/b7oicyn6023fEIC9fqaoftEJfwt.jpg",
+    price: "75.00",
+  },
+  {
+    id: 12,
+    title: "Gladiator",
+    description:
+      "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
+    movie_year: 2000,
+    director: "Ridley Scott",
+    actors: ["Russell Crowe", "Joaquin Phoenix", "Connie Nielsen", "Oliver Reed", "Richard Harris"],
+    poster_url: "https://image.tmdb.org/t/p/original/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg",
+    price: "105.00",
+  },
+  {
+    id: 13,
+    title: "The Avengers",
+    description:
+      "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.",
+    movie_year: 2012,
+    director: "Joss Whedon",
+    actors: [
+      "Robert Downey Jr.",
+      "Chris Evans",
+      "Mark Ruffalo",
+      "Chris Hemsworth",
+      "Scarlett Johansson",
+    ],
+    poster_url: "https://image.tmdb.org/t/p/original/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg",
+    price: "160.00",
+  },
+  {
+    id: 14,
+    title: "Jurassic Park",
+    description:
+      "During a preview tour, a theme park suffers a major power breakdown that allows its cloned dinosaur exhibits to run amok.",
+    movie_year: 1993,
+    director: "Steven Spielberg",
+    actors: ["Sam Neill", "Laura Dern", "Jeff Goldblum", "Richard Attenborough", "Bob Peck"],
+    poster_url: "https://image.tmdb.org/t/p/original/9i3plLl89DHMz7mahksDaAo7HIS.jpg",
+    price: "115.00",
+  },
+  {
+    id: 15,
+    title: "Titanic",
+    description:
+      "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
+    movie_year: 1997,
+    director: "James Cameron",
+    actors: ["Leonardo DiCaprio", "Kate Winslet", "Billy Zane", "Kathy Bates", "Frances Fisher"],
+    poster_url: "https://image.tmdb.org/t/p/original/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
+    price: "125.00",
+  },
 ];
 
 // Variables
 const body = document.body;
+const contentWrapper = document.getElementById("content-wrapper");
 const main = document.getElementById("main-content");
 const clearCommentsButton = document.getElementById("clear-comments-button");
 
-// Function to create the card component
-function cardCreator() {
-  movies.forEach((item) => {
+// Function create the card component and display the movies
+function displayMovies(moviesToDisplay) {
+  main.innerHTML = ""; // Clear the main content
+  moviesToDisplay.forEach((item) => {
     const card = document.createElement("div");
-    card.setAttribute("id", "card-component");
-    card.setAttribute("class", "card-component");
+    card.setAttribute("class", "fade-in card-component");
 
     const moviePoster = document.createElement("img");
     moviePoster.setAttribute("id", "card-component-poster");
@@ -96,7 +260,7 @@ function cardCreator() {
     const movieTitle = document.createElement("h2");
     movieTitle.setAttribute("id", "card-component-movie-title");
     movieTitle.setAttribute("class", "card-component-movie-title");
-    movieTitle.innerText = item.title;
+    movieTitle.innerHTML = `${item.title} <span class="movie-year">(${item.movie_year})</span>`;
 
     const movieSummary = document.createElement("p");
     movieSummary.setAttribute("id", "card-component-movie-summary");
@@ -117,9 +281,9 @@ function cardCreator() {
     movieCast.setAttribute("id", "card-component-movie-cast");
     movieCast.setAttribute("class", "card-component-movie-cast");
     movieCast.innerHTML = `
-  <strong>Cast:</strong> ${visibleActors}
-  <span class="hidden-actors">, ${hiddenActors}</span> <span class="see-more-actors">see more...</span> 
-`;
+      <strong>Cast:</strong> ${visibleActors}
+      <span class="hidden-actors">, ${hiddenActors}</span> <span class="see-more-actors">see more...</span> 
+    `;
 
     const movieRating = document.createElement("p");
     movieRating.setAttribute("id", "card-component-movie-star");
@@ -144,12 +308,12 @@ function cardCreator() {
     // Event listener to add comments
     movieComment.addEventListener("keydown", function (event) {
       if (event.key === "Enter") {
-        // If the user press the enter key
+        // If the user presses the enter key
         const inputValue = this.value;
         if (inputValue.trim()) {
           const comment = document.createElement("p");
-          comment.setAttribute("class", "comment-text")
-          comment.innerHTML = `<strong>User review (${item.title})</strong>: <br> ${inputValue}`;
+          comment.setAttribute("class", "comment-text");
+          comment.innerHTML = `<span class="comment-title">User review (${item.title})</span>: <br><br> ${inputValue}`;
           commentWrapper.style.display = "block"; // Displays the hidden div with the comment
           commentWrapper.append(comment);
           body.append(commentWrapper);
@@ -182,7 +346,6 @@ function cardCreator() {
     main.append(card);
   });
 }
-
 // Function to rate the movies
 function movieRater(movieRating) {
   const rating = parseInt(
@@ -191,11 +354,100 @@ function movieRater(movieRating) {
   );
 
   if (rating >= 1 && rating <= 5) {
-    movieRating.innerHTML = `Rated: ${"★".repeat(rating)}${"☆".repeat(5 - rating)}`;
+    movieRating.innerHTML = `Rated: <san class="rating-star">${"★".repeat(rating)}${"☆".repeat(
+      5 - rating
+    )}</span>`;
     // Repeat and combine the filled and empty stars to create the rating (created with AI support).
   } else {
     alert("Please enter a valid rating between 1 and 5.");
   }
 }
 
-cardCreator();
+// Event listener to search for a keyword in movie titles
+const searchInput = document.getElementById("header-movie-search");
+searchInput.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    // If the user press the enter key
+    const inputValue = this.value.toLowerCase();
+    const filteredMovies = movies.filter((movie) => movie.title.toLowerCase().includes(inputValue));
+    main.innerHTML = ""; // Clears the main content
+
+    // Clear any previous search messages
+    const previousMessage = document.querySelector(".search-message");
+    if (previousMessage) {
+      previousMessage.remove();
+    }
+
+    if (filteredMovies.length === 0 || inputValue === "") {
+      // Checks if there are any movies or if the user typed something
+      const searchMessage = document.createElement("p");
+      searchMessage.setAttribute("class", "search-message");
+      searchMessage.innerText = "No results found. Try refining your search terms.";
+      body.append(searchMessage);
+      this.value = "";
+    } else if (inputValue.trim()) {
+      this.value = "";
+      displayMovies(filteredMovies); // Displays the filtered movies
+    }
+  }
+});
+
+// Event Listeners to sort the movies
+const alphabeticSortButton = document.getElementById("movie-sort-button-abc");
+const dateSortButton = document.getElementById("movie-sort-button-date");
+
+// Function to remove previous messages
+function commentRemover() {
+  const previousMessage = document.querySelector(".search-message");
+  if (previousMessage) {
+    previousMessage.remove();
+  }
+}
+
+// Sorting in alphabetical order
+alphabeticSortButton.addEventListener("click", () => {
+  const alphabeticallySortedMovies = movies.sort((a, b) => {
+    if (a.title < b.title) return -1;
+    if (a.title > b.title) return 1;
+    return 0;
+  });
+
+  // Clear any previous search messages
+  commentRemover();
+
+  main.innerHTML = ""; // Clear the main content
+  displayMovies(alphabeticallySortedMovies); // Display sorted movies
+});
+
+// Sorting by date released
+dateSortButton.addEventListener("click", () => {
+  const dateSortedMovies = movies.sort((a, b) => a.movie_year - b.movie_year);
+
+  // Clear any previous search messages
+  commentRemover();
+
+  main.innerHTML = ""; // Clear the main content
+  displayMovies(dateSortedMovies); // Display sorted movies
+  contentWrapper.style.opacity = 1;
+});
+
+// Back to the top button
+const backToTopButton = document.getElementById("back-to-top-button");
+
+// If the user scrolled the page more than 300px the button will show up
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTopButton.style.display = "block";
+  } else {
+    backToTopButton.style.display = "none";
+  }
+});
+
+// The Window will scroll back up on click
+backToTopButton.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+  });
+});
+
+displayMovies(movies); // Initially displays the movies on the page
