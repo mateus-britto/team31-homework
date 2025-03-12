@@ -8,6 +8,7 @@
   </head>
   <body>
     <div id="content-wrapper" class="content-wrapper">
+
       <header class="header header-main">
         <div id="header-input-container" class="header-input-container">
           <label for="header-movie-search" class="header-movie-search-label">Search Movies</label>
@@ -17,6 +18,7 @@
             class="header-movie-search"
             placeholder="Search for a movie"
           />
+          <a href="#comment-section" class="comment-section-link">See user reviews</a>
         </div>
 
         <div id="header-title-container" class="header-title-container">
@@ -32,9 +34,16 @@
           <button id="movie-sort-button-date" class="movie-sort-button">Date</button>
         </div>
       </header>
+
+      <div id="search-message-container" class="search-message-container"></div>
+
       <main id="main-content" class="fade-in main-content"></main>
-      <button id="clear-comments-button" class="clear-comments-button">Clear Comments</button>
+
+      <div id="comment-section" class="comment-section">
+        <button id="clear-comments-button" class="clear-comments-button">Clear Comments</button>
+      </div>
       <button id="back-to-top-button" class="fade-in back-to-top-button">⇧ back to top</button>
+
     </div>
     <script src="movie-app.js"></script>
   </body>

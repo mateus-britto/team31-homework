@@ -239,6 +239,8 @@ const body = document.body;
 const contentWrapper = document.getElementById("content-wrapper");
 const main = document.getElementById("main-content");
 const clearCommentsButton = document.getElementById("clear-comments-button");
+const commentSection = document.getElementById("comment-section")
+const searchMessageContainer = document.getElementById("search-message-container")
 
 // Function create the card component and display the movies
 function displayMovies(moviesToDisplay) {
@@ -313,10 +315,10 @@ function displayMovies(moviesToDisplay) {
         if (inputValue.trim()) {
           const comment = document.createElement("p");
           comment.setAttribute("class", "comment-text");
-          comment.innerHTML = `<span class="comment-title">User review (${item.title})</span>: <br><br> ${inputValue}`;
+          comment.innerHTML = `<span class="comment-title">User review (${item.title}):</span> <br><br> ${inputValue}`;
           commentWrapper.style.display = "block"; // Displays the hidden div with the comment
           commentWrapper.append(comment);
-          body.append(commentWrapper);
+          commentSection.append(commentWrapper);
           this.value = ""; // Clear input field after submitting
           clearCommentsButton.style.display = "block"; // Displays the button if there are messages
         } else {
@@ -383,7 +385,7 @@ searchInput.addEventListener("keydown", function (event) {
       const searchMessage = document.createElement("p");
       searchMessage.setAttribute("class", "search-message");
       searchMessage.innerText = "No results found. Try refining your search terms.";
-      body.append(searchMessage);
+      searchMessageContainer.append(searchMessage)
       this.value = "";
     } else if (inputValue.trim()) {
       this.value = "";
