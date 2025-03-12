@@ -25,7 +25,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 30px 30px 60px 30px;
+  margin: 30px 30px 0 30px;
 }
 
 .header-input-container {
@@ -192,6 +192,14 @@ body {
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
   color: gainsboro;
   border-radius: 4px;
+}
+
+.search-message-container {
+  margin-top: 60px;
+}
+
+.search-message-container:empty {
+  margin: 0;
 }
 
 .card-component-movie-comment:focus,
