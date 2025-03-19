@@ -324,6 +324,7 @@ function displayMovies(moviesToDisplay) {
 
     // Event listener to add comments
     movieComment.addEventListener("keydown", function (event) {
+      event.preventDefault(); // Prevents the default action (like adding a newline on a phone)
       if (event.key === "Enter") {
         // If the user presses the enter key
         const inputValue = this.value;
@@ -536,4 +537,4 @@ backToTopButton.addEventListener("click", () => {
   });
 });
 
-displayMovies(movies); // Initially displays the movies on the page
+displayMovies(movies); // Initially displays the movies on the pageF
