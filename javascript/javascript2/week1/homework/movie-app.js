@@ -239,15 +239,30 @@ const body = document.body;
 const contentWrapper = document.getElementById("content-wrapper");
 const main = document.getElementById("main-content");
 const clearCommentsButton = document.getElementById("clear-comments-button");
-const commentSection = document.getElementById("comment-section")
-const searchMessageContainer = document.getElementById("search-message-container")
+const commentSection = document.getElementById("comment-section");
+const searchMessageContainer = document.getElementById("search-message-container");
+
+// Time spent on the page
+let timeSpent = 0; // Initialize time spent in milliseconds
+const timeSpentElement = document.getElementById("time-spent");
+
+document.addEventListener("DOMContentLoaded", () => {
+  setInterval(() => {
+    timeSpent += 10; // Increase by 10ms
+    const minutes = Math.floor(timeSpent / (60 * 1000));
+    const seconds = Math.floor((timeSpent % (60 * 1000)) / 1000);
+    timeSpentElement.innerText = `Time on the page: ${String(minutes).padStart(2, "0")}:${String(
+      seconds
+    ).padStart(2, "0")}`;
+  }, 10); // Update every 10ms
+});
 
 // Function create the card component and display the movies
 function displayMovies(moviesToDisplay) {
   main.innerHTML = ""; // Clear the main content
   moviesToDisplay.forEach((item) => {
     const card = document.createElement("div");
-    card.setAttribute("class", "fade-in card-component");
+    card.setAttribute("class", "fade-in card-component item");
 
     const moviePoster = document.createElement("img");
     moviePoster.setAttribute("id", "card-component-poster");
@@ -348,6 +363,23 @@ function displayMovies(moviesToDisplay) {
     main.append(card);
   });
 }
+
+// Event listener to toggle between light and dark modes
+const modeButton = document.getElementById("toggle-mode");
+let toggle = true;
+
+modeButton.addEventListener("click", () => {
+  if (toggle) {
+    document.documentElement.classList.add("light-mode"); // Apply to <html>
+    modeButton.innerText = "🌙"; // Update button text
+    toggle = false;
+  } else {
+    document.documentElement.classList.remove("light-mode"); // Remove from <html>
+    modeButton.innerText = "☀️"; // Update button text
+    toggle = true;
+  }
+});
+
 // Function to rate the movies
 function movieRater(movieRating) {
   const rating = parseInt(
@@ -374,6 +406,59 @@ searchInput.addEventListener("keydown", function (event) {
     const filteredMovies = movies.filter((movie) => movie.title.toLowerCase().includes(inputValue));
     main.innerHTML = ""; // Clears the main content
 
+    // I used AI to help me display the elapsed time in MM:SS:MS
+    let userInput;
+    do {
+      userInput = prompt("Would you like to set a time limit for choosing your movie? (yes/no)");
+      if (userInput === null) return; // Handle cancel button in prompt
+    } while (userInput.toLowerCase() !== "yes" && userInput.toLowerCase() !== "no");
+
+    if (userInput.toLowerCase() === "yes") {
+      let timerInput;
+      do {
+        timerInput = parseInt(prompt("Set a timer (in minutes)"), 10) * 60 * 1000; // Convert minutes to milliseconds
+        if (userInput === null) return; // Handle cancel button in prompt
+      } while (isNaN(timerInput)); // Ensures the user types a number
+
+      let timer = document.getElementById("timer");
+
+      const countdown = setInterval(() => {
+        if (timerInput > 0) {
+          timerInput -= 10; // Decrease by 10ms
+          const minutes = Math.floor(timerInput / (60 * 1000));
+          const seconds = Math.floor((timerInput % (60 * 1000)) / 1000);
+          const milliseconds = Math.floor((timerInput % 1000) / 10);
+          timer.innerText = `Make your choice \n${String(minutes).padStart(2, "0")}:${String(
+            seconds
+          ).padStart(2, "0")}:${String(milliseconds).padStart(2, "0")}`;
+        } else {
+          clearInterval(countdown); // Stop the timer
+          timer.innerText = `Time's up! Search again.`;
+          const alarmSound = document.getElementById("alarmSound");
+          alarmSound.play();
+          displayMovies(movies); // Refresh the screen when the time is up
+        }
+      }, 10); // Update every 10ms
+    } else if (userInput.toLowerCase() === "no") {
+      const previousMessage = document.querySelector(".search-message");
+      timer.innerText = " ";
+      if (previousMessage) {
+        previousMessage.remove();
+      }
+
+      if (filteredMovies.length === 0 || inputValue === "") {
+        // Checks if there are any movies or if the user typed something
+        const searchMessage = document.createElement("p");
+        searchMessage.setAttribute("class", "search-message");
+        searchMessage.innerText = "No results found. Try refining your search terms.";
+        searchMessageContainer.append(searchMessage);
+        this.value = "";
+      } else if (inputValue.trim()) {
+        this.value = "";
+        displayMovies(filteredMovies); // Displays the filtered movies
+      }
+    }
+
     // Clear any previous search messages
     const previousMessage = document.querySelector(".search-message");
     if (previousMessage) {
@@ -385,7 +470,7 @@ searchInput.addEventListener("keydown", function (event) {
       const searchMessage = document.createElement("p");
       searchMessage.setAttribute("class", "search-message");
       searchMessage.innerText = "No results found. Try refining your search terms.";
-      searchMessageContainer.append(searchMessage)
+      searchMessageContainer.append(searchMessage);
       this.value = "";
     } else if (inputValue.trim()) {
       this.value = "";
@@ -430,7 +515,6 @@ dateSortButton.addEventListener("click", () => {
 
   main.innerHTML = ""; // Clear the main content
   displayMovies(dateSortedMovies); // Display sorted movies
-  contentWrapper.style.opacity = 1;
 });
 
 // Back to the top button

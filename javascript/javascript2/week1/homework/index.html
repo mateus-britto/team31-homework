@@ -8,6 +8,8 @@
   </head>
   <body>
     <div id="content-wrapper" class="content-wrapper">
+      <button id="toggle-mode" class="toggle-mode">☀️</button>
+      <p id="time-spent" class="time-spent"></p>
 
       <header class="header header-main">
         <div id="header-input-container" class="header-input-container">
@@ -35,6 +37,9 @@
         </div>
       </header>
 
+      <div id="timer" class="timer"></div>
+      <audio id="alarmSound" src="https://www.myinstants.com/media/sounds/wwe-bell.mp3"></audio>
+
       <div id="search-message-container" class="search-message-container"></div>
 
       <main id="main-content" class="fade-in main-content"></main>
@@ -43,7 +48,6 @@
         <button id="clear-comments-button" class="clear-comments-button">Clear Comments</button>
       </div>
       <button id="back-to-top-button" class="fade-in back-to-top-button">⇧ back to top</button>
-
     </div>
     <script src="movie-app.js"></script>
   </body>
