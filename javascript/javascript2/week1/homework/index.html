@@ -4,19 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Movie App</title>
+    <title>The Golden Theater</title>
   </head>
   <body>
     <div id="content-wrapper" class="content-wrapper">
-      <header class="header header--main">
-        <h1 id="header-title" class="header-title">The Golden Theater</h1>
-        <p id="header-description" class="header-description">
-          The gold standard for movie streaming
-        </p>
+      <button id="toggle-mode" class="toggle-mode">☀️</button>
+      <p id="time-spent" class="time-spent"></p>
+
+      <header class="header">
+        <div id="header-input-container" class="header-input-container">
+          <label for="header-movie-search" class="header-movie-search-label">Search Movies</label>
+          <input
+            type="text"
+            id="header-movie-search"
+            class="header-movie-search"
+            placeholder="Search for a movie"
+          />
+          <a href="#comment-section" class="comment-section-link">See user reviews</a>
+        </div>
+
+        <div id="header-title-container" class="header-title-container">
+          <h1 id="header-title" class="header-title">The Golden Theater</h1>
+          <p id="header-description" class="header-description">
+            The gold standard for movie streaming
+          </p>
+        </div>
+
+        <div id="movie-sort-wrapper" class="movie-sort-wrapper">
+          <p class="movie-sort">Sort by</p>
+          <button id="movie-sort-button-abc" class="movie-sort-button">A-Z</button>
+          <button id="movie-sort-button-date" class="movie-sort-button">Date</button>
+        </div>
       </header>
-      <main id="main-content" class="main-content"></main>
-      <button id="clear-comments-button" class="clear-comments-button">Clear Comments</button>
+
+      <time id="timer" class="timer"></time>
+      <audio id="alarmSound" src="https://www.myinstants.com/media/sounds/wwe-bell.mp3"></audio>
+
+      <div id="search-message-container" class="search-message-container"></div>
+
+      <main id="main-content" class="fade-in main-content"></main>
+
+      <div id="comment-section" class="comment-section">
+        <button id="clear-comments-button" class="clear-comments-button">Clear Comments</button>
+      </div>
+      <button id="back-to-top-button" class="fade-in back-to-top-button">⇧ back to top</button>
     </div>
+    
+    <script src="data.js"></script>
     <script src="movie-app.js"></script>
   </body>
 </html>
