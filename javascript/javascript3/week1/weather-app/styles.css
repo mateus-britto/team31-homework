@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url(images/background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  font-size: 2.5rem;
+  color: gainsboro;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.weather-card {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 30px;
+  color: gainsboro;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.weather-card-top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.local {
+  background-color: rgba(17, 25, 40, 0.75);
+  border: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 1.2rem;
+  padding: 5px;
+  color: gainsboro;
+}
+
+.date {
+  text-align: center;
+  font-size: 1.3rem;
+  color: gainsboro;
+}
+
+.weather-card-main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.temperature {
+    text-align: center;
+  font-size: 3.5rem;
+  color: aquamarine;
+}
+
+.city,
+.condition {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.country {
+  font-size: 1.2rem;
+  color: slategray;
+}
+
+.condition {
+  font-size: 3rem;
+}
+
+.sun-variation {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.weather-card-bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.subtitle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wind,
+.humidity,
+.rain {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: slategray;
+}
+
+.units {
+  font-size: 1rem;
+}
+
+.am-pm {
+  font-size: 1.4rem;
+}
+
+.rise-set {
+  font-size: 1.4rem;
+  color: orange;
+}

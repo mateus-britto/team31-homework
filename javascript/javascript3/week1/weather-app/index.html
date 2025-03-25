@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="content-wrapper">
+      <header class="header">
+        <h1 class="title">World Weather</h1>
+      </header>
+
+      <main id="main" class="main">
+        <div id="weather-card" class="weather-card">
+          <div id="weather-card-top" class="weather-card-top">
+            <h2 id="date" class="date"></h2>
+            <input id="local" class="local" type="text" placeholder="Search for a city" />
+          </div>
+
+          <div id="weather-card-main" class="weather-card-main">
+            <h2 id="temperature" class="temperature"></h2>
+            <h2 id="city" class="city"></h2>
+            <h2 id="condition" class="condition"></h2>
+          </div>
+
+          <div id="sun-variation" class="sun-variation">
+            <div id="sunrise-wrapper">
+              <h2 id="sunrise" class="sunrise"></h2>
+            </div>
+            <div id="sunset-wrapper">
+              <h2 id="sunset" class="sunset"></h2>
+            </div>
+          </div>
+
+          <div id="weather-card-bottom" class="weather-card-bottom">
+            <div id="wind-containner" class="subtitle-container">
+              <h2 id="wind" class="wind"></h2>
+              <h2 class="subtitle">wind</h2>
+            </div>
+            <div id="humidity-container" class="subtitle-container">
+              <h2 id="humidity" class="humidity"></h2>
+              <h2 class="subtitle">humidity</h2>
+            </div>
+            <div id="rain-container" class="subtitle-container">
+              <h2 id="rain" class="rain"></h2>
+              <h2 class="subtitle">rain</h2>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <script src="app.js"></script>
+    </div>
+  </body>
+</html>
