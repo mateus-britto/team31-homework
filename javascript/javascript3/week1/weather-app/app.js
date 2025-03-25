@@ -24,7 +24,7 @@ function fetchWeatherData(location) {
       }
 
       // Temperature
-      temperature.innerHTML = `${(data.main.temp - 273.15).toFixed(2)}°C`;
+      temperature.innerHTML = `${(data.main.temp - 273.15).toFixed(0)}°C`;
       city.innerHTML = `${data.name} <span class="country">${data.sys.country}</span>`;
 
       // The sunrise and sunset time conversions where made with AI
