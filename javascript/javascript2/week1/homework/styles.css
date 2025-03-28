@@ -388,7 +388,8 @@ strong {
   animation: fadeIn 1s ease-out forwards;
 }
 
-button {
+button,
+.see-more-actors {
   cursor: pointer;
 }
 

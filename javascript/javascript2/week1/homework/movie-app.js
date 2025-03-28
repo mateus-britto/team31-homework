@@ -1,5 +1,22 @@
 // JavaScript 2 Project - Movie App
 
+// Using the created API
+const movies = []; // Variable to store the data from the API
+
+fetch(
+  "https://raw.githubusercontent.com/mateus-britto/mateus-britto.github.io/refs/heads/main/data.json"
+)
+  .then((response) => response.json())
+  .then((data) => {
+    data.forEach((movie) => {
+      movies.push(movie);
+    });
+    displayMovies(movies); // Call displayMovies after movies are populated
+  })
+  .catch((error) => {
+    console.error("Error fetching movies:", error);
+  });
+
 // Variables
 const body = document.body;
 const contentWrapper = document.getElementById("content-wrapper");
@@ -304,8 +321,8 @@ window.addEventListener("scroll", () => {
 // The Window will scroll back up on click
 backToTopButton.addEventListener("click", () => {
   window.scrollTo({
-    top: 0,
+        top: 0,
   });
 });
 
-displayMovies(movies); // Initially displays the movies on the pageF
+displayMovies(movies); // Initially displays the movies on the page
