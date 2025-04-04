@@ -1,21 +1,27 @@
 // JavaScript 2 Project - Movie App
 
 // Using the created API
+const url =
+  "https://raw.githubusercontent.com/mateus-britto/mateus-britto.github.io/refs/heads/main/data.json";
 const movies = []; // Variable to store the data from the API
 
-fetch(
-  "https://raw.githubusercontent.com/mateus-britto/mateus-britto.github.io/refs/heads/main/data.json"
-)
-  .then((response) => response.json())
-  .then((data) => {
-    data.forEach((movie) => {
+// Using async/await
+async function fetchData() {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error("Error fetching movies");
+    }
+    const data = await response.json();
+    for (const movie of data) {
       movies.push(movie);
-    });
-    displayMovies(movies); // Call displayMovies after movies are populated
-  })
-  .catch((error) => {
-    console.error("Error fetching movies:", error);
-  });
+    }
+    displayMovies(movies);
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+await fetchData();
 
 // Variables
 const body = document.body;
@@ -265,9 +271,37 @@ function handleSearchResults(filteredMovies, inputValue) {
   }
 }
 
-// Event Listeners to sort the movies
-const alphabeticSortButton = document.getElementById("movie-sort-button-abc");
-const dateSortButton = document.getElementById("movie-sort-button-date");
+// Event Listeners to sort the movies via dropdown
+const movieSelect = document.getElementById("movie-sort");
+
+movieSelect.addEventListener("change", () => {
+  const option = movieSelect.value;
+
+  // Displays the movies by release date
+  if (option === "alphabetic") {
+    const alphabeticallySortedMovies = movies.sort((a, b) => {
+      if (a.title < b.title) return -1;
+      if (a.title > b.title) return 1;
+      return 0;
+    });
+
+    // Clear any previous search messages
+    commentRemover();
+
+    main.innerHTML = ""; // Clear the main content
+    displayMovies(alphabeticallySortedMovies); // Display sorted movies
+
+    // Displays the movies alphabetically
+  } else if (option === "date") {
+    const dateSortedMovies = movies.sort((a, b) => a.movie_year - b.movie_year);
+
+    // Clear any previous search messages
+    commentRemover();
+
+    main.innerHTML = ""; // Clear the main content
+    displayMovies(dateSortedMovies); // Display sorted movies
+  }
+});
 
 // Function to remove previous messages
 function commentRemover() {
@@ -276,35 +310,6 @@ function commentRemover() {
     previousMessage.remove();
   }
 }
-
-// Sorting in alphabetical order
-alphabeticSortButton.addEventListener("click", () => {
-  const alphabeticallySortedMovies = movies.sort((a, b) => {
-    if (a.title < b.title) return -1;
-    if (a.title > b.title) return 1;
-    return 0;
-  });
-
-  // Clear any previous search messages
-  commentRemover();
-
-  main.innerHTML = ""; // Clear the main content
-  displayMovies(alphabeticallySortedMovies); // Display sorted movies
-});
-/*
-The commentRemover function will clear the "No results found. Try refining your search terms." message every time a new search is made. 
-*/
-
-// Sorting by date released
-dateSortButton.addEventListener("click", () => {
-  const dateSortedMovies = movies.sort((a, b) => a.movie_year - b.movie_year);
-
-  // Clear any previous search messages
-  commentRemover();
-
-  main.innerHTML = ""; // Clear the main content
-  displayMovies(dateSortedMovies); // Display sorted movies
-});
 
 // Back to the top button
 const backToTopButton = document.getElementById("back-to-top-button");
@@ -321,7 +326,7 @@ window.addEventListener("scroll", () => {
 // The Window will scroll back up on click
 backToTopButton.addEventListener("click", () => {
   window.scrollTo({
-        top: 0,
+    top: 0,
   });
 });
 

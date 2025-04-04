@@ -82,7 +82,7 @@ html {
 
 .header-movie-search-label,
 .movie-sort,
-.movie-sort-button,
+.movie-sort-label,
 .header-title,
 .header-description,
 .card-component-movie-star,
@@ -92,7 +92,8 @@ html {
 .clear-comments-button,
 .back-to-top-button,
 .time-spent,
-.timer {
+.timer,
+option {
   color: var(--titles-buttons-color);
 }
 
@@ -114,32 +115,15 @@ html {
   margin-bottom: 10px;
 }
 
-.movie-sort,
-.header-movie-search-label {
+.header-movie-search-label,
+.movie-sort-label {
   font-weight: bold;
 }
 
-.movie-sort-button {
-  width: 100%;
-  font-size: 1rem;
-  padding: 5px;
-  background-color: var(--button-background-color);
-  border: none;
-  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
-  border-radius: 4px;
-  font-weight: bold;
-}
-
-.movie-sort-button:hover,
 .back-to-top-button:hover {
   background-color: var(--button-background-color-hover);
   color: #0f0f0f;
   transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-.movie-sort-button:active {
-  transform: scale(0.95);
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .movie-sort-wrapper {
@@ -149,6 +133,21 @@ html {
   justify-content: center;
   flex: 1;
   gap: 10px;
+}
+
+.movie-sort {
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 5px 10px;
+  background-color: var(--button-background-color);
+  border: none;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+  color: var(--titles-buttons-color);
+  border-radius: 4px;
+}
+
+.movie-sort:active {
+  border: none;
 }
 
 .main-content {

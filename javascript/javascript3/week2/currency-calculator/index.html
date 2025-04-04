@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Currency Converter</title>
+  </head>
+  <body>
+    <div id="content-wrapper" class="content-wrapper">
+      <header id="header" class="header">
+        <h1 class="header-title">Royal Exchange</h1>
+        <p class="header-subtitle">Your reliable exchange service</p>
+      </header>
+
+      <main id="main-content" class="main-content">
+        <div class="input-currency-container">
+          <div id="currency-container" class="currency-container">
+            <label for="currency-from-selector" class="currency-label">Select a Currency</label>
+            <select
+              name="currencies"
+              id="currency-from-selector"
+              class="currency-from-selector"
+            ></select>
+
+            <label for="from"></label>
+            <input id="from" type="number" placeholder="Set a value..." />
+          </div>
+
+          <div id="currency-container" class="currency-container">
+            <label for="currency-to-selector" class="currency-label">Select a Currency</label>
+            <select
+              name="currencies"
+              id="currency-to-selector"
+              class="currency-to-selector"
+            ></select>
+
+            <label for="to"></label>
+            <input id="to" type="number" placeholder="Set a value..." />
+          </div>
+        </div>
+
+        <div class="exchange-date-caontainer">
+          <p class="exchange-date-title">Rates last updated:</p>
+          <p id="exchange-date" class="exchange-date"></p>
+        </div>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

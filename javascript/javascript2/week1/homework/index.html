@@ -31,9 +31,12 @@
         </div>
 
         <div id="movie-sort-wrapper" class="movie-sort-wrapper">
-          <p class="movie-sort">Sort by</p>
-          <button id="movie-sort-button-abc" class="movie-sort-button">A-Z</button>
-          <button id="movie-sort-button-date" class="movie-sort-button">Date</button>
+          <label for="movie-sort" id="movie-sort-label" class="movie-sort-label">Sort Movies</label>
+          <select name="movie-sort" id="movie-sort" class="movie-sort">
+            <option value="">--Please choose an option--</option>
+            <option value="date">Release date</option>
+            <option value="alphabetic">Alphabetic (A-Z)</option>
+          </select>
         </div>
       </header>
 
