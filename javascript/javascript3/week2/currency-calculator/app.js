@@ -36,7 +36,7 @@ async function fetchCurrency() {
   }
 }
 
-await fetchCurrency();
+fetchCurrency();
 
 // Helper function to get the currencies form the API
 function getCurrencies(currencyData, elementToAppend) {

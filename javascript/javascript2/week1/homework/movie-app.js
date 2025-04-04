@@ -21,7 +21,7 @@ async function fetchData() {
     console.error(error.message);
   }
 }
-await fetchData();
+fetchData(); // Added await as per mentor's suggestion
 
 // Variables
 const body = document.body;
