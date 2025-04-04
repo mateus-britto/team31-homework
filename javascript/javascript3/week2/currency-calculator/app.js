@@ -1,8 +1,10 @@
 // Currency converter
 
 // Variables
-const url1 = "https://v6.exchangerate-api.com/v6/ece1faae718b5e53f9a037c5/latest/EUR/";
-const url2 = "https://v6.exchangerate-api.com/v6/ece1faae718b5e53f9a037c5/latest/DKK/";
+const euroExchangeRateApiUrl =
+  "https://v6.exchangerate-api.com/v6/ece1faae718b5e53f9a037c5/latest/EUR/";
+const dkkExchangeRateApiUrl =
+  "https://v6.exchangerate-api.com/v6/ece1faae718b5e53f9a037c5/latest/DKK/";
 const selectCurrencyFrom = document.getElementById("currency-from-selector");
 const selectCurrencyTo = document.getElementById("currency-to-selector");
 const currencyFrom = document.getElementById("from");
@@ -13,7 +15,10 @@ const lastUpdateDate = document.getElementById("exchange-date");
 async function fetchCurrency() {
   try {
     // Fetch both URLs
-    const [data1, data2] = await Promise.all([fetchData(url1), fetchData(url2)]);
+    const [data1, data2] = await Promise.all([
+      fetchData(euroExchangeRateApiUrl),
+      fetchData(dkkExchangeRateApiUrl),
+    ]);
 
     // Store conversion rates
     conversionRates = data1.conversion_rates;
@@ -31,7 +36,7 @@ async function fetchCurrency() {
   }
 }
 
-fetchCurrency();
+await fetchCurrency();
 
 // Helper function to get the currencies form the API
 function getCurrencies(currencyData, elementToAppend) {

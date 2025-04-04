@@ -21,7 +21,7 @@ async function fetchData() {
     console.error(error.message);
   }
 }
-fetchData();
+await fetchData();
 
 // Variables
 const body = document.body;
