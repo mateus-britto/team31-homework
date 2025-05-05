@@ -1,0 +1,26 @@
+# Ignore node_modules folder
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.tmp
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore build artifacts
+dist/
+build/
+
+# Ignore environment files
+.env
+
+# Ignore IDE specific files
+.idea/
+.vscode/
+
+# Ignore the sql-test folder
+databases/sql-test/
