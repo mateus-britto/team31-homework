@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "type": "doc",
+    "value": "First document sample",
+    "price": 17
+  },
+  {
+    "id": 2,
+    "type": "doc",
+    "value": "Second document sample",
+    "price": 42
+  },
+  {
+    "id": 3,
+    "type": "doc",
+    "value": "Third document sample",
+    "price": 8
+  },
+  {
+    "id": 4,
+    "type": "doc",
+    "value": "Fourth document sample",
+    "price": 25
+  },
+  {
+    "id": 5,
+    "type": "doc",
+    "value": "Fifth document sample",
+    "price": 33
+  }
+]
