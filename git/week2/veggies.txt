@@ -1,7 +1,2 @@
 Carrot
 Broccoli
-pumpkin
-Tomato
-Cucumber
-Spinach
-Eggplant
