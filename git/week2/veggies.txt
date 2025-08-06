@@ -1,5 +1,2 @@
 Carrot
 Broccoli
-corn
-Tomato
-Cucumber
